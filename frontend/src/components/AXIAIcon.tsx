@@ -7,7 +7,7 @@
 //
 // https://github.com/axiatech/oo7/blob/251ba2b7c45503b68eab4320c270b5afa9bccb60/packages/axia-identicon/src/index.jsx
 import * as React from 'react';
-import { blake2AsU8a, decodeAddress } from '@axia/util-crypto';
+import { blake2AsU8a, decodeAddress } from '@axia-js/util-crypto';
 import { getSVGShadowRoot, W3SVG } from '../utils';
 
 interface Circle {
