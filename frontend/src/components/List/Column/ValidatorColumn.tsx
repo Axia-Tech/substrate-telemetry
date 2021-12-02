@@ -47,11 +47,7 @@ export class ValidatorColumn extends React.Component<Column.Props, {}> {
     return (
       <td className="Column" onClick={this.onClick}>
         <Tooltip text={validator} copy={this.onCopy} />
-        <AxiaIcon
-          className="Column-validator"
-          account={validator}
-          size={16}
-        />
+        <AxiaIcon className="Column-validator" account={validator} size={16} />
       </td>
     );
   }
