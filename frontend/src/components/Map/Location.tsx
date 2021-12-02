@@ -118,7 +118,11 @@ export class Location extends React.Component<Location.Props, Location.State> {
           <td colSpan={5}>
             {trimHash(validator, 30)}
             <span className="Location-validator">
-              <AxiaIcon className="Column-validator" account={validator} size={16} />
+              <AxiaIcon
+                className="Column-validator"
+                account={validator}
+                size={16}
+              />
             </span>
           </td>
         </tr>
