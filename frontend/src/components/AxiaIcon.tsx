@@ -190,7 +190,7 @@ function generate(address: string, isSixPoint = false): Circle[] {
   );
 }
 
-export namespace AXIAIcon {
+export namespace AxiaIcon {
   export interface Props {
     account: string;
     size: number;
@@ -226,8 +226,8 @@ function renderShadowIcon(account: string) {
   }
 }
 
-export class AXIAIcon extends React.Component<AXIAIcon.Props, {}> {
-  public shouldComponentUpdate(nextProps: AXIAIcon.Props) {
+export class AxiaIcon extends React.Component<AxiaIcon.Props, {}> {
+  public shouldComponentUpdate(nextProps: AxiaIcon.Props) {
     return (
       this.props.account !== nextProps.account ||
       this.props.size !== nextProps.size

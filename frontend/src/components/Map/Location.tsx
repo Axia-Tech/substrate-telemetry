@@ -21,7 +21,7 @@ import {
   milliOrSecond,
   secondsWithPrecision,
 } from '../../utils';
-import { Ago, Icon, AXIAIcon } from '../';
+import { Ago, Icon, AxiaIcon } from '../';
 import { Node } from '../../state';
 
 import nodeIcon from '../../icons/server.svg';
@@ -118,7 +118,7 @@ export class Location extends React.Component<Location.Props, Location.State> {
           <td colSpan={5}>
             {trimHash(validator, 30)}
             <span className="Location-validator">
-              <AXIAIcon account={validator} size={16} />
+              <AxiaIcon account={validator} size={16} />
             </span>
           </td>
         </tr>

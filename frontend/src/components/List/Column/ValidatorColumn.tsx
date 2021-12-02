@@ -18,7 +18,7 @@ import * as React from 'react';
 import { Maybe } from '../../../common';
 import { Column } from './';
 import { Node } from '../../../state';
-import { Tooltip, AXIAIcon } from '../../';
+import { Tooltip, AxiaIcon } from '../../';
 import icon from '../../../icons/shield.svg';
 
 export class ValidatorColumn extends React.Component<Column.Props, {}> {
@@ -47,7 +47,7 @@ export class ValidatorColumn extends React.Component<Column.Props, {}> {
     return (
       <td className="Column" onClick={this.onClick}>
         <Tooltip text={validator} copy={this.onCopy} />
-        <AXIAIcon
+        <AxiaIcon
           className="Column-validator"
           account={validator}
           size={16}

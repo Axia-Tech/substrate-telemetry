@@ -20,7 +20,7 @@ import { Node } from '../../../state';
 import { Tooltip, Icon } from '../../';
 import icon from '../../../icons/terminal.svg';
 
-import axiaAXIAIcon from '../../../icons/dot.svg';
+import axiaPolkadotIcon from '../../../icons/dot.svg';
 import axiaSubstrateIcon from '../../../icons/substrate.svg';
 import axiaJsIcon from '../../../icons/axia-js.svg';
 import airalabRobonomicsIcon from '../../../icons/robonomics.svg';
@@ -41,8 +41,8 @@ import zeroIcon from '../../../icons/zero.svg';
 import crustIcon from '../../../icons/crust.svg';
 
 const ICONS = {
-  'axia-axia': axiaAXIAIcon,
-  'Parity AXIA': axiaAXIAIcon,
+  'axia-axia': axiaPolkadotIcon,
+  'Parity AXIA': axiaPolkadotIcon,
   'axia-js': axiaJsIcon,
   'airalab-robonomics': airalabRobonomicsIcon,
   'substrate-node': axiaSubstrateIcon,
