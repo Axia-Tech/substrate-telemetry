@@ -6,7 +6,7 @@
   "description": "AXIA Telemetry frontend",
   "scripts": {
     "precommit": "lint-staged",
-    "start": "PORT=3001 rreact-scripts-ts start",
+    "start": "PORT=3001 react-scripts-ts start",
     "build": "react-scripts-ts build",
     "test": "TS_NODE_PROJECT=tsconfig.test.json tape -r ts-node/register test/**/*spec.ts",
     "test:coverage": "nyc yarn test",
