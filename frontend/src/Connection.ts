@@ -65,7 +65,7 @@ export class Connection {
     }
 
     if (window.location.protocol === 'https:') {
-      return `wss://${window.location.hostname}/feed/`;
+      return `wss://core.${window.location.hostname}/feed/`;
     }
 
     return `ws://127.0.0.1:8000/feed`;
