@@ -17,7 +17,7 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 */
 
 .Tooltip {
-  background: #000;
+  background: #178fe1;
   color: #fff;
   font-family: Roboto, Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -30,7 +30,7 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
   left: 50%;
   transform: translateX(-50%);
   display: none;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 8px 32px rgba(20, 92, 143, 0.08);
   pointer-events: none;
   transition: color 0.15s ease-in-out;
 }
@@ -44,7 +44,7 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
   left: 50%;
   bottom: -6px;
   margin-left: -6px;
-  border-top: 6px #000 solid;
+  border-top: 6px #178fe1 solid;
   border-left: 6px transparent solid;
   border-right: 6px transparent solid;
   pointer-events: none;

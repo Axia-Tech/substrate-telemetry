@@ -67,28 +67,30 @@ export class Map extends React.Component<Map.Props, Map.State> {
 
     return (
       <React.Fragment>
-        <div className="Map">
-          {nodes.map((node) => {
-            const { lat, lon } = node;
+        <div className="Map-container">
+          <div className="Map">
+            {nodes.map((node) => {
+              const { lat, lon } = node;
 
-            const focused = filter == null || filter(node);
+              const focused = filter == null || filter(node);
 
-            if (lat == null || lon == null) {
-              // Skip nodes with unknown location
-              return null;
-            }
+              if (lat == null || lon == null) {
+                // Skip nodes with unknown location
+                return null;
+              }
 
-            const position = this.pixelPosition(lat, lon);
+              const position = this.pixelPosition(lat, lon);
 
-            return (
-              <Location
-                key={node.id}
-                position={position}
-                focused={focused}
-                node={node}
-              />
-            );
-          })}
+              return (
+                <Location
+                  key={node.id}
+                  position={position}
+                  focused={focused}
+                  node={node}
+                />
+              );
+            })}
+          </div>
         </div>
         <Filter onChange={this.onFilterChange} />
       </React.Fragment>

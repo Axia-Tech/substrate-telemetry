@@ -16,8 +16,19 @@ You should have received a copy of the GNU General Public License
 along with this program. If not, see <https://www.gnu.org/licenses/>.
 */
 
+.Map-container {
+  height: 95%;
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  box-shadow: 0px 8px 32px rgba(20, 92, 143, 0.26);
+  /* box-shadow: 0px 8px 32px rgba(20, 92, 143, 0.08); */
+  border-radius: 20px;
+}
+
 .Map {
   min-width: 1350px;
+  margin-top: 1.5rem;
   background: url('../../assets/world-map.svg') no-repeat;
   background-size: contain;
   background-position: center;

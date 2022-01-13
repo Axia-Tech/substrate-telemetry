@@ -43,23 +43,27 @@ export class Settings extends React.Component<Settings.Props, {}> {
     return (
       <div className="Settings">
         <div className="Settings-category">
-          <h1>List View</h1>
-          <h2>Visible Columns</h2>
-          {Row.columns.map(({ label, icon, setting }, index) => {
-            if (!setting) {
-              return null;
-            }
+          <div className="Settings-header">
+            <h1>List View</h1>
+          </div>
+          <div className="Settings-body">
+            <h2>Visible Columns</h2>
+            {Row.columns.map(({ label, icon, setting }, index) => {
+              if (!setting) {
+                return null;
+              }
 
-            return (
-              <Setting
-                key={index}
-                setting={setting}
-                settings={settings}
-                icon={icon}
-                label={label}
-              />
-            );
-          })}
+              return (
+                <Setting
+                  key={index}
+                  setting={setting}
+                  settings={settings}
+                  icon={icon}
+                  label={label}
+                />
+              );
+            })}
+          </div>
         </div>
       </div>
     );

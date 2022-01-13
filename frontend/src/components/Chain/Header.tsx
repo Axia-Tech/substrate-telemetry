@@ -59,20 +59,22 @@ export class Header extends React.Component<Header.Props, {}> {
 
     return (
       <div className="Header">
-        <Tile icon={blockIcon} title="Best Block">
-          #{formatNumber(best)}
-        </Tile>
-        <Tile icon={finalizedIcon} title="Finalized Block">
-          #{formatNumber(finalized)}
-        </Tile>
-        <Tile icon={blockTimeIcon} title="Average Time">
-          {blockAverage == null
-            ? '-'
-            : secondsWithPrecision(blockAverage / 1000)}
-        </Tile>
-        <Tile icon={lastTimeIcon} title="Last Block">
-          <Ago when={blockTimestamp} />
-        </Tile>
+        <div className="Header-Tile">
+          <Tile icon={blockIcon} title="Best Block">
+            #{formatNumber(best)}
+          </Tile>
+          <Tile icon={finalizedIcon} title="Finalized Block">
+            #{formatNumber(finalized)}
+          </Tile>
+          <Tile icon={blockTimeIcon} title="Average Time">
+            {blockAverage == null
+              ? '-'
+              : secondsWithPrecision(blockAverage / 1000)}
+          </Tile>
+          <Tile icon={lastTimeIcon} title="Last Block">
+            <Ago when={blockTimestamp} />
+          </Tile>
+        </div>
         <div className="Header-tabs">
           <Tab
             icon={listIcon}

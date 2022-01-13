@@ -22,6 +22,22 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
   overflow-anchor: none;
 }
 
+table th:first-child {
+  border-top-left-radius: 20px;
+}
+
+table th:last-child {
+  border-top-right-radius: 20px;
+}
+
+table tr:last-child td:first-child {
+  border-bottom-left-radius: 20px;
+}
+
+table tr:last-child td:last-child {
+  border-bottom-right-radius: 20px;
+}
+
 .List-no-nodes {
   font-size: 30px;
   padding-top: 20vh;
@@ -38,4 +54,10 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
   width: 100%;
   border-spacing: 0;
   font-family: monospace, sans-serif;
+  border-collapse: collapse;
+  padding: 0rem 0rem 10rem 0rem;
+  background: #F8F9FA;
+  /* box-shadow: 0px 8px 32px rgba(20, 92, 143, 0.08); */
+  box-shadow: 0px 8px 32px rgba(20, 92, 143, 0.26);
+  border-radius: 20px;
 }

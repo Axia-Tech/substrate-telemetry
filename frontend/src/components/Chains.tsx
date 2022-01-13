@@ -62,7 +62,9 @@ export class Chains extends React.Component<Chains.Props, {}> {
 
     return (
       <div className="Chains">
-        {chains.slice(0, VISIBLE_CAP).map((chain) => this.renderChain(chain))}
+        <div className="Chains-margin">
+          {chains.slice(0, VISIBLE_CAP).map((chain) => this.renderChain(chain))}
+        </div>
         <a
           className="Chains-all-chains"
           href={allChainsHref}

@@ -133,14 +133,14 @@ export class Location extends React.Component<Location.Props, Location.State> {
       <table className="Location-details Location-details">
         <tbody>
           <tr>
-            <td title="Node">
+            <td title="Node" className="icon-color">
               <Icon src={nodeIcon} />
             </td>
             <td colSpan={5}>{name}</td>
           </tr>
           {validatorRow}
           <tr>
-            <td title="Implementation">
+            <td title="Implementation" className="icon-color">
               <Icon src={nodeTypeIcon} />
             </td>
             <td colSpan={5}>
@@ -148,37 +148,37 @@ export class Location extends React.Component<Location.Props, Location.State> {
             </td>
           </tr>
           <tr>
-            <td title="Location">
+            <td title="Location" className="icon-color">
               <Icon src={nodeLocationIcon} />
             </td>
             <td colSpan={5}>{city}</td>
           </tr>
           <tr>
-            <td title="Block">
+            <td title="Block" className="icon-color">
               <Icon src={blockIcon} />
             </td>
             <td colSpan={5}>#{formatNumber(height)}</td>
           </tr>
           <tr>
-            <td title="Block Hash">
+            <td title="Block Hash" className="icon-color">
               <Icon src={blockHashIcon} />
             </td>
             <td colSpan={5}>{trimHash(hash, 20)}</td>
           </tr>
           <tr>
-            <td title="Block Time">
+            <td title="Block Time" className="icon-color">
               <Icon src={blockTimeIcon} />
             </td>
             <td style={{ width: 80 }}>
               {secondsWithPrecision(blockTime / 1000)}
             </td>
-            <td title="Block Propagation Time">
+            <td title="Block Propagation Time" className="icon-color">
               <Icon src={propagationTimeIcon} />
             </td>
             <td style={{ width: 58 }}>
               {propagationTime == null ? '∞' : milliOrSecond(propagationTime)}
             </td>
-            <td title="Last Block Time">
+            <td title="Last Block Time" className="icon-color">
               <Icon src={lastTimeIcon} />
             </td>
             <td style={{ minWidth: 82 }}>

@@ -21,14 +21,18 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
   left: 0;
   right: 0;
   bottom: 0;
-  top: 148px;
+  top: 150px;
+  display: flex;
+  justify-content: center;
+  /* background: #E9F6FF; */
 }
 
 .Chain-content {
-  width: 100%;
-  min-width: 1350px;
-  min-height: 100%;
-  background: #2c2b2b;
+  width: 95%;
+  min-width: 1200px;
+  /* min-height: 100%; */
+  margin-top: 1.5rem;
+  /* background: #2c2b2b; */
   color: #fff;
-  box-shadow: rgba(0, 0, 0, 0.5) 0 3px 30px;
+  /* box-shadow: rgba(0, 0, 0, 0.5) 0 3px 30px; */
 }

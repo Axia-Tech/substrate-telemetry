@@ -17,9 +17,9 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 */
 
 .Chains {
-  background: #178fe1;
+  background: #178FE1;
   color: #000;
-  padding: 0 76px 0 16px;
+  padding: 10px 76px 0 16px;
   height: 40px;
   /* min-width is 1350 - 76 - 16 to account for padding */
   min-width: 1258px;
@@ -27,7 +27,7 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 }
 
 .Chains-chain {
-  top: 4px;
+  bottom: 2.5px;
   padding: 0 12px;
   color: #fff;
   display: inline-block;
@@ -37,25 +37,30 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
   cursor: pointer;
   font-size: 0.8em;
   position: relative;
-  border-radius: 4px 4px 0 0;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.Chains-margin {
+  margin-left: 40px;
 }
 
 .Chains-all-chains {
   display: block;
-  padding: 0;
+  padding: 0 50px;
   margin: 0;
   position: absolute;
   right: 48px;
-  top: 6px;
+  top: 10px;
 }
 
 .Chains-fork-me {
   display: block;
-  padding: 0;
-  margin: 0;
+  padding: 0 40px;
+  margin: 0px ;
   position: absolute;
   right: 12px;
-  top: 6px;
+  top: 10px;
 }
 
 .Chains-all-chains .Icon,
@@ -71,7 +76,8 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
   padding: 0 5px;
   display: inline-block;
   height: 20px;
-  border-radius: 20px;
+  height: 20px;
+  border-radius: 8px;
   background: #fff;
   color: #178fe1;
   font-size: 0.9em;
@@ -80,12 +86,12 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 }
 
 .Chains-chain-selected {
-  background: #fff;
-  color: #393838;
+  background: #45A5E7;
+  color: #fff;
   font-weight: bold;
 }
 
 .Chains-chain-selected .Chains-node-count {
-  background: #393838;
-  color: #fff;
+  background: #fff;
+  color: #45A5E7;
 }

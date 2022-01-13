@@ -17,21 +17,21 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 */
 
 .Row {
-  color: #b5aeae;
+  color: #000;
   cursor: pointer;
 }
 
 .Row-synced {
-  color: #fff;
+  color: #000;
 }
 
 .Row-pinned td:first-child {
-  border-left: 3px solid #178fe1;
+  /* border-left: 3px solid #178fe1; */
   padding-left: 10px;
 }
 
 .Row-pinned td:last-child {
-  border-right: 3px solid #178fe1;
+  /* border-right: 3px solid #178fe1; */
   padding-right: 10px;
 }
 
@@ -44,5 +44,5 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 }
 
 .Row:hover {
-  background-color: #1e1e1e;
+  background: #E9F6FF;
 }
