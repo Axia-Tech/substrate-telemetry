@@ -26,7 +26,7 @@ import { Node } from '../../state';
 
 import nodeIcon from '../../icons/server.svg';
 import nodeValidatorIcon from '../../icons/shield.svg';
-import nodeTypeIcon from '../../icons/terminal.svg';
+import nodeTypeIcon from '../../icons/settings-alt.svg';
 import nodeLocationIcon from '../../icons/location.svg';
 import blockIcon from '../../icons/package.svg';
 import blockHashIcon from '../../icons/file-binary.svg';

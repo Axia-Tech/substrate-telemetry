@@ -17,7 +17,7 @@
 import * as React from 'react';
 import { Column } from './';
 import { Node } from '../../../state';
-import icon from '../../../icons/inbox.svg';
+import icon from '../../../icons/inbox-alt.svg';
 
 export class TxsColumn extends React.Component<Column.Props, {}> {
   public static readonly label = 'Transactions in Queue';

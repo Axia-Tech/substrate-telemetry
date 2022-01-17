@@ -19,7 +19,7 @@ import { Maybe } from '../../../common';
 import { Column } from './';
 import { Node } from '../../../state';
 import { Truncate, Tooltip } from '../../';
-import icon from '../../../icons/file-binary.svg';
+import icon from '../../../icons/file-block.svg';
 
 export class FinalizedHashColumn extends React.Component<Column.Props, {}> {
   public static readonly label = 'Finalized Block Hash';

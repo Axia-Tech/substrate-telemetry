@@ -24,7 +24,7 @@ import blockIcon from '../../icons/cube.svg';
 import finalizedIcon from '../../icons/cube-alt.svg';
 import blockTimeIcon from '../../icons/history.svg';
 import lastTimeIcon from '../../icons/watch.svg';
-import listIcon from '../../icons/list-alt-regular.svg';
+import listIcon from '../../icons/server.svg';
 import worldIcon from '../../icons/location.svg';
 import settingsIcon from '../../icons/settings.svg';
 import consensusIcon from '../../icons/cube-alt.svg';

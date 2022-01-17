@@ -17,7 +17,7 @@
 import * as React from 'react';
 import { Column } from './';
 import { Node } from '../../../state';
-import icon from '../../../icons/broadcast.svg';
+import icon from '../../../icons/users.svg';
 
 export class PeersColumn extends React.Component<Column.Props, {}> {
   public static readonly label = 'Peer Count';

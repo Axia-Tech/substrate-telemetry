@@ -20,7 +20,7 @@ import { Column } from './';
 import { Node } from '../../../state';
 import { Truncate } from '../../';
 import { Tooltip } from '../../';
-import icon from '../../../icons/fingerprint.svg';
+import icon from '../../../icons/user-id.svg';
 
 export class NetworkIdColumn extends React.Component<Column.Props, {}> {
   public static readonly label = 'Network ID';

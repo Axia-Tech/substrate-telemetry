@@ -19,7 +19,7 @@ import { Types, Maybe, timestamp } from '../../../common';
 import { Column, BANDWIDTH_SCALE } from './';
 import { Node } from '../../../state';
 import { Sparkline } from '../../';
-import icon from '../../../icons/cloud-download.svg';
+import icon from '../../../icons/cloud-download-alt.svg';
 
 export class DownloadColumn extends React.Component<Column.Props, {}> {
   public static readonly label = 'Download Bandwidth';

@@ -18,7 +18,7 @@ import * as React from 'react';
 import { Column } from './';
 import { Node } from '../../../state';
 import { Ago } from '../../';
-import icon from '../../../icons/pulse.svg';
+import icon from '../../../icons/pulse-alt.svg';
 
 export class UptimeColumn extends React.Component<Column.Props, {}> {
   public static readonly label = 'Node Uptime';

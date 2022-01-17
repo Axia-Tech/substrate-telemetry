@@ -18,10 +18,10 @@ import * as React from 'react';
 import { Column } from './';
 import { Node } from '../../../state';
 import { Tooltip, Icon } from '../../';
-import icon from '../../../icons/terminal.svg';
+import icon from '../../../icons/settings-alt.svg';
 
 import axiaPolkadotIcon from '../../../icons/dot.svg';
-import axiaSubstrateIcon from '../../../icons/substrate.svg';
+import axiaSubstrateIcon from '../../../icons/terminal.svg';
 import axiaJsIcon from '../../../icons/axia-js.svg';
 import airalabRobonomicsIcon from '../../../icons/robonomics.svg';
 import chainXIcon from '../../../icons/chainx.svg';
