@@ -80,7 +80,7 @@ Once this is running, you'll be able to navigate to [http://localhost:3000](http
 
 ### Terminal 4 - Node
 
-Follow up installation instructions from the [AXIA repo](https://github.com/axiatech/axia)
+Follow up installation instructions from the [AXIA repo](https://github.com/AXIA-JS/apps)
 
 If you started the backend binaries with their default arguments, you can connect a node to the shard by running:
 
