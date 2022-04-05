@@ -17,24 +17,20 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 */
 
 .Map-container {
-  height: 95%;
   display: flex;
   justify-content: center;
   background: #fff;
-  box-shadow: 0px 8px 32px rgba(20, 92, 143, 0.26);
-  /* box-shadow: 0px 8px 32px rgba(20, 92, 143, 0.08); */
-  border-radius: 20px;
+  box-shadow: 0px 3.92857px 15.7143px rgba(20, 92, 143, 0.08);
+  border-radius: 10px;
+  width: 600px;
+  height: 350px;
 }
 
 .Map {
-  min-width: 1350px;
-  margin-top: 1.5rem;
+  width: 573px;
+  height: 322px;
+  margin: 1rem;
   background: url('../../assets/world-map.svg') no-repeat;
   background-size: contain;
   background-position: center;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
 }

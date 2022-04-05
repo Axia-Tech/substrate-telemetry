@@ -75,12 +75,8 @@ export class Chain extends React.Component<Chain.Props, Chain.State> {
           blockAverage={blockAverage}
           blockTimestamp={blockTimestamp}
           currentTab={currentTab}
-          appState={appState}
           setDisplay={this.setDisplay}
         />
-        {/* <div>
-          <Map appState={appState} />
-        </div> */}
         <div className="Chain-content-container">
           <div className="Chain-content">{this.renderContent()}</div>
         </div>

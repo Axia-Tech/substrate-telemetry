@@ -16,9 +16,11 @@
 
 import * as React from 'react';
 import { Types, Maybe } from '../../common';
+import { State as AppState, Update as AppUpdate } from '../../state';
 import { formatNumber, secondsWithPrecision } from '../../utils';
 import { Tab, Chain } from './';
 import { Tile, Ago } from '../';
+import { Map } from '../Map';
 
 import blockIcon from '../../icons/cube.svg';
 import finalizedIcon from '../../icons/cube-alt.svg';
@@ -33,6 +35,7 @@ import './Header.css';
 
 export namespace Header {
   export interface Props {
+    appState: Readonly<AppState>;
     best: Types.BlockNumber;
     finalized: Types.BlockNumber;
     blockTimestamp: Types.Timestamp;
@@ -54,7 +57,8 @@ export class Header extends React.Component<Header.Props, {}> {
   }
 
   public render() {
-    const { best, finalized, blockTimestamp, blockAverage } = this.props;
+    const { appState } = this.props;
+    const { best, finalized, blockTimestamp, blockAverage } = appState;
     const { currentTab, setDisplay } = this.props;
 
     return (
@@ -74,6 +78,9 @@ export class Header extends React.Component<Header.Props, {}> {
           <Tile icon={lastTimeIcon} title="Last Block">
             <Ago when={blockTimestamp} />
           </Tile>
+        </div>
+        <div className="Map">
+          <Map appState={appState} />
         </div>
         <div className="Header-tabs">
           <Tab

@@ -24,7 +24,7 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
   border-radius: 6px;
   margin-left: -4px;
   margin-top: -4px;
-  position: absolute;
+  position: inherit;
   top: 50%;
   left: 50%;
   cursor: pointer;
