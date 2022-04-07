@@ -17,7 +17,7 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 */
 
 .Chains {
-  background: #fff;
+  background: #178FE1;
   color: #000;
   padding: 10px 76px 0 16px;
   height: 40px;
@@ -68,7 +68,7 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
   margin: 0;
   height: 28px;
   width: 28px;
-  color: #178FE1;
+  color: #fff;
 }
 
 .Chains-node-count {

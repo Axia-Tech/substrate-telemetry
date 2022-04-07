@@ -19,8 +19,8 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 .Tile {
   font-size: 2em;
   text-align: left;
-  width: 260px;
-  height: 100px;
+  width: 250px;
+  height: 130px;
   display: inline-block;
   position: relative;
   background: #ffffff;

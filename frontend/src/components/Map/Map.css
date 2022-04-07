@@ -22,13 +22,13 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
   background: #fff;
   box-shadow: 0px 3.92857px 15.7143px rgba(20, 92, 143, 0.08);
   border-radius: 10px;
-  width: 600px;
-  height: 350px;
+  width: 744px;
+  height: 418px;
 }
 
 .Map {
-  width: 573px;
-  height: 322px;
+  width: 744px;
+  height: 418px;
   margin: 1rem;
   background: url('../../assets/world-map.svg') no-repeat;
   background-size: contain;
