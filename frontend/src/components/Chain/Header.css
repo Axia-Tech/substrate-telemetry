@@ -44,3 +44,9 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
   width: 200px;
   text-align: right;
 }
+
+@media only screen and (max-width: 1350px) {
+ .Header-Tile {
+  margin-left: 20px;
+}
+}

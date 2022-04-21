@@ -35,7 +35,7 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
   right: 0;
   font-size: 0.4em;
   text-transform: uppercase;
-  color: #777E90;
+  color: #777e90;
 }
 
 .Tile-content {
@@ -54,6 +54,14 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
   font-size: 0.8em;
   padding: 0.5em;
   border-radius: 1.25em;
-  background: #E9F6FF;
+  background: #e9f6ff;
   color: #178fe1;
+}
+
+@media only screen and (max-width: 1350px) {
+  .Tile {
+    width: 200px;
+    height: 130px;
+    margin: 0.5rem;
+  }
 }

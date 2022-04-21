@@ -158,6 +158,7 @@ export default class App extends React.Component<{}, {}> {
           chains={chains}
           subscribed={subscribed}
           connection={this.connection}
+          settings={this.settings}
         />
         <Chain
           appState={this.appState}

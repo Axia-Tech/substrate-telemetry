@@ -64,6 +64,7 @@ export class Header extends React.Component<Header.Props, {}> {
     return (
       <div className="Header">
         <div className="Header-Tile">
+          <h1>Some title</h1>
           <Tile icon={blockIcon} title="Best Block">
             #{formatNumber(best)}
           </Tile>
@@ -81,32 +82,6 @@ export class Header extends React.Component<Header.Props, {}> {
         </div>
         <div className="Map">
           <Map appState={appState} />
-        </div>
-        <div className="Header-tabs">
-          <Tab
-            icon={listIcon}
-            label="List"
-            display="list"
-            tab=""
-            current={currentTab}
-            setDisplay={setDisplay}
-          />
-          <Tab
-            icon={worldIcon}
-            label="Map"
-            display="map"
-            tab="map"
-            current={currentTab}
-            setDisplay={setDisplay}
-          />
-          <Tab
-            icon={settingsIcon}
-            label="Settings"
-            display="settings"
-            tab="settings"
-            current={currentTab}
-            setDisplay={setDisplay}
-          />
         </div>
       </div>
     );

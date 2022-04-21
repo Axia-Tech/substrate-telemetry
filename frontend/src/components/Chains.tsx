@@ -23,12 +23,23 @@ import { ChainData } from '../state';
 import githubIcon from '../icons/mark-github.svg';
 import listIcon from '../icons/kebab-horizontal.svg';
 import './Chains.css';
+import lineOpen from '../icons/line_open.svg';
+import lineClose from '../icons/line_close.svg';
+import { Tab } from './Chain/Tab';
+import { List, Settings } from '.';
+import { State as AppState, Update as AppUpdate } from '../state';
+import { Persistent, PersistentObject, PersistentSet } from '../persist';
 
 export namespace Chains {
+  export type Display = boolean;
   export interface Props {
     chains: ChainData[];
     subscribed: Maybe<Types.GenesisHash>;
     connection: Promise<Connection>;
+    settings: PersistentObject<AppState.Settings>;
+  }
+  export interface State {
+    display: Display;
   }
 }
 
@@ -37,7 +48,15 @@ const VISIBLE_CAP = 16;
 // Milliseconds, sets the minimum time between the renders
 const RENDER_THROTTLE = 1000;
 
-export class Chains extends React.Component<Chains.Props, {}> {
+export class Chains extends React.Component<Chains.Props, Chains.State> {
+  constructor(props: Chains.Props) {
+    super(props);
+
+    const display: Chains.Display = false;
+    this.state = {
+      display,
+    };
+  }
   private lastRender = performance.now();
   private clicked: Maybe<Types.GenesisHash>;
 
@@ -58,29 +77,55 @@ export class Chains extends React.Component<Chains.Props, {}> {
     const allChainsHref = this.props.subscribed
       ? `#all-chains/${this.props.subscribed}`
       : `#all-chains`;
-    const { chains } = this.props;
+    const { chains, settings } = this.props;
+    const { display: currentTab } = this.state;
 
     return (
-      <div className="Chains">
-        <div className="Chains-margin">
-          {chains.slice(0, VISIBLE_CAP).map((chain) => this.renderChain(chain))}
+      <>
+        <div className="Chains">
+          <div className="chains-left-icon">
+            <Tab
+              icon={currentTab ? lineOpen : lineClose}
+              label="Settings"
+              display={currentTab}
+              tab={currentTab}
+              current={currentTab}
+              setDisplay={this.setDisplay}
+            />
+            <div className="Chains-margin">
+              {chains
+                .slice(0, VISIBLE_CAP)
+                .map((chain) => this.renderChain(chain))}
+            </div>
+          </div>
+          <div>
+            <a
+              className="Chains-all-chains"
+              href={allChainsHref}
+              title="All Chains"
+            >
+              <Icon src={listIcon} />
+            </a>
+
+            <a
+              className="Chains-fork-me"
+              href="https://github.com/axia-tech/substrate-telemetry"
+              target="_blank"
+              title="Fork Me!"
+            >
+              <Icon src={githubIcon} />
+            </a>
+          </div>
         </div>
-        <a
-          className="Chains-all-chains"
-          href={allChainsHref}
-          title="All Chains"
-        >
-          <Icon src={listIcon} />
-        </a>
-        <a
-          className="Chains-fork-me"
-          href="https://github.com/axia-tech/substrate-telemetry"
-          target="_blank"
-          title="Fork Me!"
-        >
-          <Icon src={githubIcon} />
-        </a>
-      </div>
+        {console.log(currentTab, 'currenttab')}
+        {currentTab && (
+          <div className="sidebar-container">
+            <div>
+              <Settings settings={settings} />
+            </div>
+          </div>
+        )}
+      </>
     );
   }
 
@@ -117,4 +162,8 @@ export class Chains extends React.Component<Chains.Props, {}> {
 
     connection.subscribe(chain);
   }
+  private setDisplay = (display: Chains.Display) => {
+    console.log(display);
+    this.setState({ display: !display });
+  };
 }

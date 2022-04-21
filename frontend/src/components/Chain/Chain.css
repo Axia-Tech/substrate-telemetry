@@ -17,11 +17,6 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 */
 
 .Chain-content-container {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 600px;
   display: flex;
   justify-content: space-evenly;
   /* background: #E9F6FF; */
@@ -29,7 +24,7 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 
 .Chain-content {
   width: 80%;
-  min-width: 1200px;
+  min-width: 1300px;
   /* min-height: 100%; */
   margin-top: 1.5rem;
   /* background: #2c2b2b; */
