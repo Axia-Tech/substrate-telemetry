@@ -17,19 +17,14 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 */
 
 .Chain-content-container {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 150px;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   /* background: #E9F6FF; */
 }
 
 .Chain-content {
-  width: 95%;
-  min-width: 1200px;
+  width: 80%;
+  min-width: 1300px;
   /* min-height: 100%; */
   margin-top: 1.5rem;
   /* background: #2c2b2b; */

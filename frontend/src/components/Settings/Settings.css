@@ -27,7 +27,9 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
   margin: 0 auto;
   background: #fff;
   box-shadow: 0px 8px 32px rgba(20, 92, 143, 0.26);
-  border-radius: 20px;
+  border-radius: 0px;
+  position: absolute;
+  height: 100vh;
 }
 
 .Settings-header {

@@ -16,9 +16,11 @@
 
 import * as React from 'react';
 import { Types, Maybe } from '../../common';
+import { State as AppState, Update as AppUpdate } from '../../state';
 import { formatNumber, secondsWithPrecision } from '../../utils';
 import { Tab, Chain } from './';
 import { Tile, Ago } from '../';
+import { Map } from '../Map';
 
 import blockIcon from '../../icons/cube.svg';
 import finalizedIcon from '../../icons/cube-alt.svg';
@@ -33,6 +35,7 @@ import './Header.css';
 
 export namespace Header {
   export interface Props {
+    appState: Readonly<AppState>;
     best: Types.BlockNumber;
     finalized: Types.BlockNumber;
     blockTimestamp: Types.Timestamp;
@@ -54,12 +57,14 @@ export class Header extends React.Component<Header.Props, {}> {
   }
 
   public render() {
-    const { best, finalized, blockTimestamp, blockAverage } = this.props;
+    const { appState } = this.props;
+    const { best, finalized, blockTimestamp, blockAverage } = appState;
     const { currentTab, setDisplay } = this.props;
 
     return (
       <div className="Header">
         <div className="Header-Tile">
+          <h1>Some title</h1>
           <Tile icon={blockIcon} title="Best Block">
             #{formatNumber(best)}
           </Tile>
@@ -75,31 +80,8 @@ export class Header extends React.Component<Header.Props, {}> {
             <Ago when={blockTimestamp} />
           </Tile>
         </div>
-        <div className="Header-tabs">
-          <Tab
-            icon={listIcon}
-            label="List"
-            display="list"
-            tab=""
-            current={currentTab}
-            setDisplay={setDisplay}
-          />
-          <Tab
-            icon={worldIcon}
-            label="Map"
-            display="map"
-            tab="map"
-            current={currentTab}
-            setDisplay={setDisplay}
-          />
-          <Tab
-            icon={settingsIcon}
-            label="Settings"
-            display="settings"
-            tab="settings"
-            current={currentTab}
-            setDisplay={setDisplay}
-          />
+        <div className="Map">
+          <Map appState={appState} />
         </div>
       </div>
     );

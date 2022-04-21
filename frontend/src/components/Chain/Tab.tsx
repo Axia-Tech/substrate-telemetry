@@ -20,15 +20,16 @@ import { Icon } from '../';
 import { setHashData } from '../../utils';
 
 import './Tab.css';
+import { Chains } from '../Chains';
 
 export namespace Tab {
   export interface Props {
     label: string;
     icon: string;
-    display: Chain.Display;
-    current: string;
-    tab: string;
-    setDisplay: (display: Chain.Display) => void;
+    display: Chain.Display | Chains.Display;
+    current: any;
+    tab: any;
+    setDisplay: (display: Chain.Display | Chains.Display) => void;
   }
 }
 
@@ -47,7 +48,7 @@ export class Tab extends React.Component<Tab.Props, {}> {
 
   private onClick = () => {
     const { tab, display, setDisplay } = this.props;
-    setHashData({ tab });
+    // setHashData({ tab });
     setDisplay(display);
   };
 }
