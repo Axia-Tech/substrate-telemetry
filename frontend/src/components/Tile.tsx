@@ -29,9 +29,13 @@ export namespace Tile {
 export function Tile(props: Tile.Props) {
   return (
     <div className="Tile">
-      <Icon src={props.icon} />
-      <span className="Tile-label">{props.title}</span>
-      <span className="Tile-content">{props.children}</span>
+      <div>
+        <Icon src={props.icon} />
+      </div>
+      <div className="Tile-text">
+        <span className="Tile-label">{props.title}</span>
+        <span className="Tile-content">{props.children}</span>
+      </div>
     </div>
   );
 }

@@ -30,6 +30,8 @@ import listIcon from '../../icons/server.svg';
 import worldIcon from '../../icons/location.svg';
 import settingsIcon from '../../icons/settings.svg';
 import consensusIcon from '../../icons/cube-alt.svg';
+import dollar from '../../icons/dollar-sign-solid.svg';
+import hourClock from '../../icons/hourglass-solid.svg';
 
 import './Header.css';
 
@@ -64,7 +66,6 @@ export class Header extends React.Component<Header.Props, {}> {
     return (
       <div className="Header">
         <div className="Header-Tile">
-          <h1>Some title</h1>
           <Tile icon={blockIcon} title="Best Block">
             #{formatNumber(best)}
           </Tile>
@@ -79,8 +80,14 @@ export class Header extends React.Component<Header.Props, {}> {
           <Tile icon={lastTimeIcon} title="Last Block">
             <Ago when={blockTimestamp} />
           </Tile>
+          <Tile icon={dollar} title="Total Issuance">
+            #{formatNumber(best)}
+          </Tile>
+          <Tile icon={hourClock} title="Epoch">
+            #{formatNumber(finalized)}
+          </Tile>
         </div>
-        <div className="Map">
+        <div>
           <Map appState={appState} />
         </div>
       </div>

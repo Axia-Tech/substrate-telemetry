@@ -17,12 +17,12 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 */
 
 .Chains {
-  background: #fff;
+  background: #178fe1;
   color: #000;
-  height: 68px;
-  /* min-width is 1350 - 76 - 16 to account for padding */
-  min-width: 1258px;
-  position: relative;
+  padding: 0.625rem 0rem;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
   filter: drop-shadow(0px 4px 16px rgba(20, 92, 143, 0.08));
   display: flex;
   align-items: center;
@@ -30,22 +30,18 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 }
 
 .Chains-chain {
-  /* bottom: 2.5px; */
   padding: 12px;
   color: #fff;
-  /* display: inline-block; */
-  /* margin-right: 4px; */
   height: 36;
-  /* line-height: 36px; */
   cursor: pointer;
   font-size: 0.8em;
   position: relative;
   border-radius: 8px;
-  /* margin-bottom: 1.5rem; */
+  background: #45a5e7;
 }
 
 .Chains-margin {
-  /* margin-left: 40px; */
+  margin-left: 40px;
 }
 
 .Chains-all-chains {
@@ -66,7 +62,7 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
   margin: 0;
   height: 28px;
   width: 28px;
-  color: #178FE1;
+  color: #fff;
 }
 
 .Chains-node-count {
@@ -83,23 +79,24 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 }
 
 .Chains-chain-selected {
-  background: #45A5E7;
+  background: #45a5e7;
   color: #fff;
   font-weight: bold;
 }
 
 .Chains-chain-selected .Chains-node-count {
   background: #fff;
-  color: #45A5E7;
+  color: #45a5e7;
 }
-.sidebar-container{
+.sidebar-container {
   background: rgba(49, 49, 49, 0.4);
   height: 100%;
   width: 100%;
-  position: absolute;
+  position: fixed;
+  top: 68px;
   z-index: 2;
   overflow: hidden;
 }
-.sidebar{
+.sidebar {
   float: left;
 }

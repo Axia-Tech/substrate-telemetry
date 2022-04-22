@@ -15,19 +15,24 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program. If not, see <https://www.gnu.org/licenses/>.
 */
-
+.Chain {
+  height: 100vh;
+  padding-top: 100px;
+}
 .Chain-content-container {
   display: flex;
-  justify-content: space-evenly;
-  /* background: #E9F6FF; */
+  justify-content: center;
+  height: 100vh;
 }
 
 .Chain-content {
-  width: 80%;
-  min-width: 1300px;
-  /* min-height: 100%; */
   margin-top: 1.5rem;
-  /* background: #2c2b2b; */
   color: #fff;
-  /* box-shadow: rgba(0, 0, 0, 0.5) 0 3px 30px; */
+  position: relative;
+  min-width: 80%;
+}
+@media only screen and (max-width: 1440px) {
+  .Chain-content {
+    min-width: 85%;
+  }
 }

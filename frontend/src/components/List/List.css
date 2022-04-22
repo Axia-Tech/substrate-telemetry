@@ -16,10 +16,12 @@ You should have received a copy of the GNU General Public License
 along with this program. If not, see <https://www.gnu.org/licenses/>.
 */
 
-.List {
-  /* Prevents the list from auto-scrolling while cascading node
+/* Prevents the list from auto-scrolling while cascading node
    * updates on new block, which helps with performance. */
+
+.List {
   overflow-anchor: none;
+  margin: 4rem 0rem;
 }
 
 table th:first-child {
@@ -56,8 +58,15 @@ table tr:last-child td:last-child {
   font-family: monospace, sans-serif;
   border-collapse: collapse;
   padding: 0rem 0rem 10rem 0rem;
-  background: #F8F9FA;
+  background: #f8f9fa;
   /* box-shadow: 0px 8px 32px rgba(20, 92, 143, 0.08); */
   box-shadow: 0px 8px 32px rgba(20, 92, 143, 0.26);
   border-radius: 20px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .List {
+    overflow-anchor: none;
+    margin: 2rem 0rem;
+  }
 }
