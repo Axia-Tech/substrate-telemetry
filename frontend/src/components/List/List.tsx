@@ -109,7 +109,7 @@ export class List extends React.Component<List.Props, {}> {
 
     return (
       <>
-        <div className="List" style={{ height }}>
+        <div className="List">
           <table className="List--table">
             <THead columns={selectedColumns} sortBy={sortBy} />
             <tbody>

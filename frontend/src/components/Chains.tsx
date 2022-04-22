@@ -29,6 +29,8 @@ import { Tab } from './Chain/Tab';
 import { List, Settings } from '.';
 import { State as AppState, Update as AppUpdate } from '../state';
 import { Persistent, PersistentObject, PersistentSet } from '../persist';
+import settingsIcon from '../icons/settings.svg';
+import threeLine from '../icons/three-bars.svg';
 
 export namespace Chains {
   export type Display = boolean;
@@ -85,7 +87,7 @@ export class Chains extends React.Component<Chains.Props, Chains.State> {
         <div className="Chains">
           <div className="chains-left-icon">
             <Tab
-              icon={currentTab ? lineOpen : lineClose}
+              icon={currentTab ? settingsIcon : threeLine}
               label="Settings"
               display={currentTab}
               tab={currentTab}

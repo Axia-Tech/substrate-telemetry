@@ -44,7 +44,7 @@ export class Settings extends React.Component<Settings.Props, {}> {
       <div className="Settings">
         <div className="Settings-category">
           <div className="Settings-header">
-            <h1>List View</h1>
+            <h1>AXIA Telemetry</h1>
           </div>
           <div className="Settings-body">
             <h2>Visible Columns</h2>

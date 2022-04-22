@@ -21,14 +21,24 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
   justify-content: center;
   background: #fff;
   box-shadow: 0px 3.92857px 15.7143px rgba(20, 92, 143, 0.08);
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 .Map {
-  width: 744px;
-  height: 418px;
-  margin: 1rem;
+  width: 737px;
+  height: 450px;
   background: url('../../assets/world-map.svg') no-repeat;
   background-size: contain;
   background-position: center;
+}
+@media only screen and (max-width: 1536px) {
+  .Map {
+    max-width: 594px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .Map {
+    max-width: 556px;
+    height: 430px;
+  }
 }
