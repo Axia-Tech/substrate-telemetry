@@ -38,10 +38,11 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
   position: relative;
   border-radius: 8px;
   background: #45a5e7;
+  margin: 0px 5px;
 }
 
 .Chains-margin {
-  margin-left: 40px;
+  margin-left: 10px;
 }
 
 .Chains-all-chains {

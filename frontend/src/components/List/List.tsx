@@ -113,7 +113,7 @@ export class List extends React.Component<List.Props, {}> {
           <table className="List--table">
             <THead columns={selectedColumns} sortBy={sortBy} />
             <tbody>
-              <tr className="List-padding" style={{ height: `${top}px` }} />
+              <tr className="List-padding" style={{ height: 0 }} />
               {nodes.map((node, i) => (
                 <Row
                   key={keys[i]}
