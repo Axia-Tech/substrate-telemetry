@@ -21,8 +21,9 @@ import { State as AppState, Node } from '../../state';
 import { Location } from './';
 import { viewport } from '../../utils';
 
-const MAP_RATIO = 800 / 350;
-const MAP_HEIGHT_ADJUST = 400 / 350;
+const MAP_RATIO = 390 / 350;
+const MAP_HEIGHT_ADJUST = 300 / 350;
+const MAP_WIDTH_ADJUST = 390;
 const HEADER = 148;
 
 import './Map.css';
@@ -105,7 +106,9 @@ export class Map extends React.Component<Map.Props, Map.State> {
 
     // Longitude ranges -180 (west) to +180 (east)
     // Latitude ranges +90 (north) to -90 (south)
-    const left = Math.round(((180 + lon) / 360) * state.width + state.left);
+    const left = Math.round(
+      ((180 + lon) / 360) * state.width + (state.left + MAP_WIDTH_ADJUST)
+    );
     const top = Math.round(
       ((90 - lat) / 180) * state.height * MAP_HEIGHT_ADJUST + state.top
     );
