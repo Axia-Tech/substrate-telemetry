@@ -69,7 +69,7 @@ export class Location extends React.Component<Location.Props, Location.State> {
     }
 
     let className = `Location Location-quarter${quarter}`;
-
+    console.log(node, focused, position);
     if (focused) {
       if (propagationTime != null) {
         className += ' Location-synced';

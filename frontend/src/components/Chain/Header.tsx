@@ -80,12 +80,6 @@ export class Header extends React.Component<Header.Props, {}> {
           <Tile icon={lastTimeIcon} title="Last Block">
             <Ago when={blockTimestamp} />
           </Tile>
-          <Tile icon={dollar} title="Total Issuance">
-            #{formatNumber(best)}
-          </Tile>
-          <Tile icon={hourClock} title="Epoch">
-            #{formatNumber(finalized)}
-          </Tile>
         </div>
         <div>
           <Map appState={appState} />

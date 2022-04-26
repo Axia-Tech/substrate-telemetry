@@ -20,7 +20,7 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
   font-size: 2em;
   text-align: left;
   width: 303.5px;
-  height: 130px;
+  height: 210px;
   position: relative;
   background: #ffffff;
   border-radius: 20px;
@@ -38,7 +38,7 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
   gap: 10px;
 }
 .Tile-label {
-  font-size: 0.6em;
+  font-size: 0.75em;
   text-transform: uppercase;
   color: #777e90;
 }
@@ -49,7 +49,7 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 }
 
 .Tile .Icon {
-  font-size: 1.25em;
+  font-size: 1.5em;
   padding: 0.5em;
   border-radius: 1.25em;
   background: #e9f6ff;
@@ -59,10 +59,10 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 @media only screen and (max-width: 1536px) {
   .Tile {
     width: 232px;
-    height: 130px;
+    height: 210px;
   }
   .Tile-label {
-    font-size: 0.4em;
+    font-size: 0.65em;
     text-transform: uppercase;
     color: #777e90;
   }
@@ -72,33 +72,16 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
     font-size: 0.8em;
   }
   .Tile .Icon {
-    font-size: 1em;
+    font-size: 1.25em;
     padding: 0.5em;
     border-radius: 1.25em;
     background: #e9f6ff;
     color: #178fe1;
   }
 }
-@media only screen and (max-width: 1536px) {
-  .Tile {
-    width: 218px;
-    height: 130px;
-  }
-  .Tile-label {
-    font-size: 0.4em;
-    text-transform: uppercase;
-    color: #777e90;
-  }
-
-  .Tile-content {
-    font-weight: 300;
-    font-size: 0.8em;
-  }
-  .Tile .Icon {
-    font-size: 1em;
-    padding: 0.5em;
-    border-radius: 1.25em;
-    background: #e9f6ff;
-    color: #178fe1;
+@media only screen and (max-width: 1230px) {
+    .Tile {
+    width: 215px;
+    height: 205px;
   }
 }
