@@ -22,8 +22,8 @@ import { Row, THead } from './';
 import { Persistent, PersistentSet } from '../../persist';
 import { viewport } from '../../utils';
 
-const HEADER = 148;
-const TH_HEIGHT = 35;
+const HEADER = 1000;
+const TH_HEIGHT = 135;
 const TR_HEIGHT = 31;
 const ROW_MARGIN = 5;
 
