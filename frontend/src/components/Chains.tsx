@@ -111,11 +111,11 @@ export class Chains extends React.Component<Chains.Props, Chains.State> {
 
             <a
               className="Chains-fork-me"
-              href="https://github.com/axia-tech/substrate-telemetry"
-              target="_blank"
-              title="Fork Me!"
+              // href="https://github.com/axia-tech/substrate-telemetry"
+              // target="_blank"
+              // title="Fork Me!"
             >
-              <Icon src={githubIcon} />
+              {/* <Icon src={githubIcon} /> */}
             </a>
           </div>
         </div>
