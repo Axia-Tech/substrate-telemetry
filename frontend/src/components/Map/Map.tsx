@@ -68,7 +68,7 @@ export class Map extends React.Component<Map.Props, Map.State> {
 
     return (
       <React.Fragment>
-        <div className="Map-container">
+        <div className="Map-container" id="Map-container">
           <div className="Map">
             {nodes.map((node) => {
               const { lat, lon } = node;
@@ -106,13 +106,25 @@ export class Map extends React.Component<Map.Props, Map.State> {
 
     // Longitude ranges -180 (west) to +180 (east)
     // Latitude ranges +90 (north) to -90 (south)
-    const left = Math.round(
-      ((180 + lon) / 360) * state.width + (state.left + MAP_WIDTH_ADJUST)
-    );
-    const top = Math.round(
-      ((90 - lat) / 180) * state.height * MAP_HEIGHT_ADJUST + state.top
-    );
 
+    // Taking the postion of Map-container
+    const offSet = document.getElementById('Map-container')!;
+    const leftSet = offSet.getBoundingClientRect().left;
+    const topSet = offSet.getBoundingClientRect().top;
+    // Converting position of pointers.
+    const left = Math.round(((180 + lon) / 360) * offSet.clientWidth + leftSet);
+    const top = Math.round(((90 - lat) / 180) * offSet.clientHeight + 40);
+    // offset clientheight is the height of Map-Container and we are adding offsetTop to it by 50%
+    console.log(
+      '(90 - ' +
+        lat +
+        ') / 180) * ' +
+        state.height +
+        state.top +
+        ')' +
+        state.height,
+      topSet + '=' + top
+    );
     let quarter: Location.Quarter = 0;
 
     if (lon > 0) {
