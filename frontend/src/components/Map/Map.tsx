@@ -103,7 +103,7 @@ export class Map extends React.Component<Map.Props, Map.State> {
     lon: Types.Longitude
   ): Location.Position {
     const { state } = this;
-
+    const screenSize = viewport();
     // Longitude ranges -180 (west) to +180 (east)
     // Latitude ranges +90 (north) to -90 (south)
 
@@ -113,7 +113,12 @@ export class Map extends React.Component<Map.Props, Map.State> {
     const topSet = offSet.getBoundingClientRect().top;
     // Converting position of pointers.
     const left = Math.round(((180 + lon) / 360) * offSet.clientWidth + leftSet);
-    const top = Math.round(((90 - lat) / 180) * offSet.clientHeight + 40);
+    const top =
+      screenSize.width > 1150
+        ? Math.round(((90 - lat) / 180) * offSet.clientHeight + 40)
+        : Math.round(
+            ((90 - lat) / 180) * offSet.clientWidth + offSet.clientHeight + 40
+          );
     // offset clientheight is the height of Map-Container and we are adding offsetTop to it by 50%
     console.log(
       '(90 - ' +
