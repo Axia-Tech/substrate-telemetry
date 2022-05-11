@@ -27,6 +27,8 @@ const MAP_WIDTH_ADJUST = 390;
 const HEADER = 148;
 
 import './Map.css';
+import { stat } from 'fs';
+import { off } from 'process';
 
 export namespace Map {
   export interface Props {
@@ -110,26 +112,31 @@ export class Map extends React.Component<Map.Props, Map.State> {
     // Taking the postion of Map-container
     const offSet = document.getElementById('Map-container')!;
     const leftSet = offSet.getBoundingClientRect().left;
-    const topSet = offSet.getBoundingClientRect().top;
+    const topSet = offSet.getBoundingClientRect().height;
+    console.log(document.querySelector('Map'));
     // Converting position of pointers.
     const left = Math.round(((180 + lon) / 360) * offSet.clientWidth + leftSet);
-    const top =
-      screenSize.width > 1150
-        ? Math.round(((90 - lat) / 180) * offSet.clientHeight + 40)
-        : Math.round(
-            ((90 - lat) / 180) * offSet.clientWidth + offSet.clientHeight + 40
-          );
+    let top;
+    if (screenSize.width > 1150) {
+      top = Math.round(((90 - lat) / 180) * offSet.clientHeight + 40);
+    } else if (screenSize.width > 500) {
+      top = Math.round(
+        ((90 - lat) / 180) * offSet.clientWidth + offSet.clientHeight + 40
+      );
+    } else if (screenSize.width > 480) {
+      top = Math.round(
+        ((90 - lat) / 180) * state.height + offSet.clientHeight + 0
+      );
+    } else {
+      console.log(offSet.getBoundingClientRect());
+      top = Math.round(
+        ((90 - lat) / 180) * offSet.clientWidth + offSet.clientHeight - 70
+      );
+    }
     // offset clientheight is the height of Map-Container and we are adding offsetTop to it by 50%
-    console.log(
-      '(90 - ' +
-        lat +
-        ') / 180) * ' +
-        state.height +
-        state.top +
-        ')' +
-        state.height,
-      topSet + '=' + top
-    );
+    console.log('CH' + offSet.clientHeight);
+    console.log('Top:' + top);
+    console.log('SH' + state.height);
     let quarter: Location.Quarter = 0;
 
     if (lon > 0) {

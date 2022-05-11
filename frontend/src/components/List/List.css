@@ -22,6 +22,7 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 .List {
   overflow-anchor: none;
   margin: 3rem 0rem;
+  overflow-x: auto;
 }
 
 table th:first-child {
@@ -67,6 +68,12 @@ table tr:last-child td:last-child {
 @media only screen and (max-width: 1200px) {
   .List {
     overflow-anchor: none;
-    margin: 2rem 0rem;
+    margin: 2rem 15%;
+    border-radius: 20px;
+  }
+}
+@media only screen and (max-width: 765px) {
+  .List {
+    margin: 2rem 1rem;  
   }
 }
