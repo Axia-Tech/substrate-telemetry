@@ -23,6 +23,7 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
   overflow-anchor: none;
   margin: 3rem 0rem;
   overflow-x: auto;
+  border-radius: 20px;
 }
 
 table th:first-child {
