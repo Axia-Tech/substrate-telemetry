@@ -85,3 +85,17 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
     height: 205px;
   }
 }
+@media screen and (max-width: 650px){
+  .Tile{
+    width: 25vw;
+    height: 17vh;
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .Tile{
+    width: 25vw;
+    height: 10vh;
+    font-size: 14px;
+  }
+}

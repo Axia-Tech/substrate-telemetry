@@ -68,7 +68,7 @@ export class Connection {
       return `wss://core.${window.location.hostname}/feed/`;
     }
 
-    return `ws://127.0.0.1:8000/feed`;
+    return `wss://core.telemetry.test.axiacoin.network/feed/`;
   }
 
   private static async socket(): Promise<WebSocket> {

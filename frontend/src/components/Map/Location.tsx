@@ -143,7 +143,7 @@ export class Location extends React.Component<Location.Props, Location.State> {
               <Icon src={nodeTypeIcon} />
             </td>
             <td colSpan={5}>
-              {implementation} v{version}
+              {implementation} {version}
             </td>
           </tr>
           <tr>

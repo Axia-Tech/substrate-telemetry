@@ -27,6 +27,8 @@ const MAP_WIDTH_ADJUST = 390;
 const HEADER = 148;
 
 import './Map.css';
+import { stat } from 'fs';
+import { off } from 'process';
 
 export namespace Map {
   export interface Props {
@@ -68,7 +70,7 @@ export class Map extends React.Component<Map.Props, Map.State> {
 
     return (
       <React.Fragment>
-        <div className="Map-container">
+        <div className="Map-container" id="Map-container">
           <div className="Map">
             {nodes.map((node) => {
               const { lat, lon } = node;
@@ -103,16 +105,38 @@ export class Map extends React.Component<Map.Props, Map.State> {
     lon: Types.Longitude
   ): Location.Position {
     const { state } = this;
-
+    const screenSize = viewport();
     // Longitude ranges -180 (west) to +180 (east)
     // Latitude ranges +90 (north) to -90 (south)
-    const left = Math.round(
-      ((180 + lon) / 360) * state.width + (state.left + MAP_WIDTH_ADJUST)
-    );
-    const top = Math.round(
-      ((90 - lat) / 180) * state.height * MAP_HEIGHT_ADJUST + state.top
-    );
 
+    // Taking the postion of Map-container
+    const offSet = document.getElementById('Map-container')!;
+    const leftSet = offSet.getBoundingClientRect().left;
+    const topSet = offSet.getBoundingClientRect().height;
+    console.log(document.querySelector('Map'));
+    // Converting position of pointers.
+    const left = Math.round(((180 + lon) / 360) * offSet.clientWidth + leftSet);
+    let top;
+    if (screenSize.width > 1150) {
+      top = Math.round(((90 - lat) / 180) * offSet.clientHeight + 40);
+    } else if (screenSize.width > 500) {
+      top = Math.round(
+        ((90 - lat) / 180) * offSet.clientWidth + offSet.clientHeight + 40
+      );
+    } else if (screenSize.width > 480) {
+      top = Math.round(
+        ((90 - lat) / 180) * state.height + offSet.clientHeight + 0
+      );
+    } else {
+      console.log(offSet.getBoundingClientRect());
+      top = Math.round(
+        ((90 - lat) / 180) * offSet.clientWidth + offSet.clientHeight - 70
+      );
+    }
+    // offset clientheight is the height of Map-Container and we are adding offsetTop to it by 50%
+    console.log('CH' + offSet.clientHeight);
+    console.log('Top:' + top);
+    console.log('SH' + state.height);
     let quarter: Location.Quarter = 0;
 
     if (lon > 0) {
