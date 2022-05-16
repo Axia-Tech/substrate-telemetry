@@ -22,7 +22,6 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 .Chain-content-container {
   display: flex;
   justify-content: center;
-  height: 100vh;
 }
 
 .Chain-content {

@@ -113,7 +113,6 @@ export class Map extends React.Component<Map.Props, Map.State> {
     const offSet = document.getElementById('Map-container')!;
     const leftSet = offSet.getBoundingClientRect().left;
     const topSet = offSet.getBoundingClientRect().height;
-    console.log(document.querySelector('Map'));
     // Converting position of pointers.
     const left = Math.round(((180 + lon) / 360) * offSet.clientWidth + leftSet);
     let top;
@@ -121,22 +120,18 @@ export class Map extends React.Component<Map.Props, Map.State> {
       top = Math.round(((90 - lat) / 180) * offSet.clientHeight + 40);
     } else if (screenSize.width > 500) {
       top = Math.round(
-        ((90 - lat) / 180) * offSet.clientWidth + offSet.clientHeight + 40
+        ((90 - lat) / 180) * offSet.clientWidth + offSet.clientHeight + 30
       );
     } else if (screenSize.width > 480) {
       top = Math.round(
         ((90 - lat) / 180) * state.height + offSet.clientHeight + 0
       );
     } else {
-      console.log(offSet.getBoundingClientRect());
       top = Math.round(
         ((90 - lat) / 180) * offSet.clientWidth + offSet.clientHeight - 70
       );
     }
     // offset clientheight is the height of Map-Container and we are adding offsetTop to it by 50%
-    console.log('CH' + offSet.clientHeight);
-    console.log('Top:' + top);
-    console.log('SH' + state.height);
     let quarter: Location.Quarter = 0;
 
     if (lon > 0) {
