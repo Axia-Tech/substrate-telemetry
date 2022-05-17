@@ -71,7 +71,7 @@ export class Map extends React.Component<Map.Props, Map.State> {
     return (
       <React.Fragment>
         <div className="Map-container" id="Map-container">
-          <div className="Map">
+          <div className="Map" id="Map">
             {nodes.map((node) => {
               const { lat, lon } = node;
 
@@ -110,25 +110,28 @@ export class Map extends React.Component<Map.Props, Map.State> {
     // Latitude ranges +90 (north) to -90 (south)
 
     // Taking the postion of Map-container
-    const offSet = document.getElementById('Map-container')!;
+    const offSet = document.getElementById('Map')!;
     const leftSet = offSet.getBoundingClientRect().left;
-    const topSet = offSet.getBoundingClientRect().height;
     // Converting position of pointers.
     const left = Math.round(((180 + lon) / 360) * offSet.clientWidth + leftSet);
     let top;
     if (screenSize.width > 1150) {
-      top = Math.round(((90 - lat) / 180) * offSet.clientHeight + 40);
+      top = Math.round(((180 + lat) / 360) * offSet.clientHeight - 100);
+    } else if (screenSize.width > 650) {
+      top = Math.round(
+        ((180 + lat) / 360) * offSet.clientHeight + offSet.offsetTop - 100
+      );
     } else if (screenSize.width > 500) {
       top = Math.round(
-        ((90 - lat) / 180) * offSet.clientWidth + offSet.clientHeight + 30
+        ((180 + lat) / 360) * offSet.clientHeight + offSet.offsetTop - 70
       );
-    } else if (screenSize.width > 480) {
+    } else if (screenSize.width > 400) {
       top = Math.round(
-        ((90 - lat) / 180) * state.height + offSet.clientHeight + 0
+        ((180 + lat) / 360) * offSet.clientHeight + offSet.offsetTop - 60
       );
     } else {
       top = Math.round(
-        ((90 - lat) / 180) * offSet.clientWidth + offSet.clientHeight - 70
+        ((180 + lat) / 360) * offSet.clientHeight + offSet.offsetTop - 50
       );
     }
     // offset clientheight is the height of Map-Container and we are adding offsetTop to it by 50%
