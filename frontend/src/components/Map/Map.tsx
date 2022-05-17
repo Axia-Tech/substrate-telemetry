@@ -81,7 +81,6 @@ export class Map extends React.Component<Map.Props, Map.State> {
                 // Skip nodes with unknown location
                 return null;
               }
-
               const position = this.pixelPosition(lat, lon);
 
               return (
@@ -116,25 +115,27 @@ export class Map extends React.Component<Map.Props, Map.State> {
     const left = Math.round(((180 + lon) / 360) * offSet.clientWidth + leftSet);
     let top;
     if (screenSize.width > 1150) {
-      top = Math.round(((180 + lat) / 360) * offSet.clientHeight - 100);
+      top = ((90 - lat) / 180) * offSet.clientHeight + offSet.offsetTop + 40;
     } else if (screenSize.width > 650) {
       top = Math.round(
-        ((180 + lat) / 360) * offSet.clientHeight + offSet.offsetTop - 100
+        ((90 - lat) / 180) * offSet.clientHeight + offSet.offsetTop + 40
       );
     } else if (screenSize.width > 500) {
       top = Math.round(
-        ((180 + lat) / 360) * offSet.clientHeight + offSet.offsetTop - 70
+        ((90 - lat) / 180) * offSet.clientHeight + offSet.offsetTop + 30
       );
     } else if (screenSize.width > 400) {
       top = Math.round(
-        ((180 + lat) / 360) * offSet.clientHeight + offSet.offsetTop - 60
+        ((90 - lat) / 180) * offSet.clientHeight + offSet.offsetTop + 22
       );
     } else {
       top = Math.round(
-        ((180 + lat) / 360) * offSet.clientHeight + offSet.offsetTop - 50
+        ((90 - lat) / 180) * offSet.clientHeight + offSet.offsetTop + 20
       );
     }
     // offset clientheight is the height of Map-Container and we are adding offsetTop to it by 50%
+    // top = ((90 - lat) / 180) * state.height * MAP_HEIGHT_ADJUST + 50;
+    console.log(state, offSet.offsetTop, offSet.clientHeight);
     let quarter: Location.Quarter = 0;
 
     if (lon > 0) {
