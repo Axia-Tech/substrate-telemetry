@@ -135,7 +135,6 @@ export class Map extends React.Component<Map.Props, Map.State> {
     }
     // offset clientheight is the height of Map-Container and we are adding offsetTop to it by 50%
     // top = ((90 - lat) / 180) * state.height * MAP_HEIGHT_ADJUST + 50;
-    console.log(state, offSet.offsetTop, offSet.clientHeight);
     let quarter: Location.Quarter = 0;
 
     if (lon > 0) {

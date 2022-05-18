@@ -119,7 +119,6 @@ export class Chains extends React.Component<Chains.Props, Chains.State> {
             </a>
           </div>
         </div>
-        {console.log(currentTab, 'currenttab')}
         {currentTab && (
           <div className="sidebar-container">
             <div>
@@ -165,7 +164,6 @@ export class Chains extends React.Component<Chains.Props, Chains.State> {
     connection.subscribe(chain);
   }
   private setDisplay = (display: Chains.Display) => {
-    console.log(display);
     this.setState({ display: !display });
   };
 }

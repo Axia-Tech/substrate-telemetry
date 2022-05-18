@@ -376,7 +376,6 @@ export class Connection {
   };
 
   private bindSocket() {
-    console.log('Connected');
     // Disconnect if no messages are received in 60s:
     this.messageTimeout = resettableTimeout(
       this.handleDisconnect,
@@ -430,7 +429,6 @@ export class Connection {
     }
 
     const latency = timestamp() - this.pingSent;
-    console.log(`Ping latency: ${latency}ms`);
 
     this.pingSent = null;
 
